@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Loader animations</title>
+
+        <style>
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.Loader{
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    justify-content: center;
+    animation: circle 1s linear infinite;
+}
+
+@keyframes circle{
+    0%{
+        transform: rotate(0deg);
+        box-shadow: 1px 5px 2px #eb0303;
+    }
+    50%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #1518be;
+    }
+    100%{
+        transform: rotate(180deg);
+        box-shadow: 1px 5px 2px #10ee40;
+    }
+    100%{
+        transform: rotate(360deg);
+        box-shadow: 1px 5px 2px #cbee19;
+    }
+
+}
+.circle:before{
+    position: absolute;
+    content: '';
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(214,211,211,0.3);
+}
+
+span{
+    color:#fff;
+    font-size:20px;
+    letter-spacing: 1px;
+    animation: text 2s ease-in-out infinite;
+    line-height: 200px;
+    padding: 35px;
+}
+@keyframes text{
+    0%{
+        color: #fff;
+    }
+    33%{
+        color: #ec4164;
+    }
+    66%{
+        color: #259925;
+    }
+}
+        </style>
+    
+    </head>
+<body>
+
+    <div class="Loader">
+       <div class="circle"></div>
+        <span>LOADING...</span>
+        </div>
+
+</body>
+</html>
